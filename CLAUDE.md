@@ -29,7 +29,7 @@ Proyecto de portafolio (data engineering). Idioma de docs y comentarios: españo
 - Fórmulas: EBITDA = utilidad_bruta − (nómina + renta + marketing + otros_gastos); utilidad_neta = EBITDA − depreciación − intereses − impuestos (TAX_RATE=0.30). En Power BI se suman importes y luego `DIVIDE` (no promediar razones).
 
 ## Estado verificado (no afirmar más de esto)
-- 68 pruebas pasaron con un shim de Parquet; Parquet real, Kaggle real, SQL en BigQuery y Terraform NO se han ejecutado todavía. Actualizar la tabla "Estado" del README solo con lo medido.
+- CI en GitHub Actions en verde (2026-10-05): 68 pruebas con pandas 3.0.6 y pyarrow 25.0.1 reales, y `terraform fmt -check` + `validate` (proveedor google 6.50). Kaggle real, SQL en BigQuery y `terraform apply` NO se han ejecutado todavía. Actualizar la tabla "Estado" del README solo con lo medido.
 - Pendiente del autor: aplicar Terraform, subir token a Secret Manager, correr el pipeline, capturas (docs/img/README.md), cifras medidas.
 
 ## Portafolio
