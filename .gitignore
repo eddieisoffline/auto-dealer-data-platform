@@ -13,3 +13,7 @@ data/
 *.tfstate
 *.tfstate.*
 terraform.tfvars
+# Planes guardados (terraform plan -out): contienen valores de la infraestructura
+tfplan
+*.tfplan
+plan.txt
