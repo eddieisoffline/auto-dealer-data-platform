@@ -29,8 +29,10 @@ Proyecto de portafolio (data engineering). Idioma de docs y comentarios: españo
 - Fórmulas: EBITDA = utilidad_bruta − (nómina + renta + marketing + otros_gastos); utilidad_neta = EBITDA − depreciación − intereses − impuestos (TAX_RATE=0.30). En Power BI se suman importes y luego `DIVIDE` (no promediar razones).
 
 ## Estado verificado (no afirmar más de esto)
-- CI en GitHub Actions en verde (2026-10-05): 68 pruebas con pandas 3.0.6 y pyarrow 25.0.1 reales, y `terraform fmt -check` + `validate` (proveedor google 6.50). Kaggle real, SQL en BigQuery y `terraform apply` NO se han ejecutado todavía. Actualizar la tabla "Estado" del README solo con lo medido.
-- Pendiente del autor: aplicar Terraform, subir token a Secret Manager, correr el pipeline, capturas (docs/img/README.md), cifras medidas.
+- CI en GitHub Actions en verde (2026-10-05): 68 pruebas con pandas 3.0.6 y pyarrow 25.0.1 reales, y `terraform fmt -check` + `validate` (proveedor google 6.50). Actualizar la tabla "Estado" del README solo con lo medido.
+- GCP desplegado (2026-10-05, proyecto `portafolio-510421`): Terraform aplicado, token de Kaggle en Secret Manager, imagen `pipeline:0.1.0`, job `dealer-pipeline` y Scheduler `dealer-pipeline-daily` (6:00 America/Mexico_City). Carga 2022 en Cloud Run: backfill 2:12 (365 días, 10,645 filas, 292 particiones; 73 días sin ventas), curate 2:51 (validaciones OK, 12 meses de gastos/objetivos), warehouse 2:10. BigQuery: 10,645 filas en `ventas`, 28 concesionarias, 336 filas en `kpi_mensual`; margen bruto 13.95 %, cumplimiento 97.76 % (cifras sintéticas).
+- Los logs de la app llegan a Cloud Logging como texto plano en stderr, sin severidad (mejora pendiente: logs JSON).
+- Pendiente: primer deploy automático vía GitHub Actions, reporte de Power BI, capturas (docs/img/README.md), actualizar case-study.md.
 
 ## Portafolio
 - `case-study.md` es la única fuente que publica el backend del portafolio (sincroniza los `.md` del repo y omite los que no tienen frontmatter `title`/`slug`). `README.md` y `docs/*.md` no llevan frontmatter.

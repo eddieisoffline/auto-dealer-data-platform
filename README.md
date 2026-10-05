@@ -145,8 +145,11 @@ docs/                documentación
 | Componente | Estado |
 |------------|--------|
 | Ingesta, curated, validaciones y warehouse (código) | Completo, con pruebas unitarias |
-| Terraform, Cloud Run Job y despliegue con GitHub Actions | Definido en código, aún sin desplegar |
-| SQL de BigQuery y reporte de Power BI | SQL escrito, sin ejecutar contra BigQuery · reporte pendiente |
+| Infraestructura en GCP (Terraform) | Desplegada: bucket, BigQuery, Secret Manager, Artifact Registry, Cloud Run Job y Scheduler diario |
+| Carga histórica 2022 | Ejecutada en Cloud Run: 10,645 ventas en 292 días con ventas, 28 concesionarias; backfill 2:12, curate 2:51, warehouse 2:10 (min:s) |
+| SQL de BigQuery | Ejecutado: tablas en `dealer_curated` y vistas de KPIs en `dealer_marts` |
+| Despliegue automático con GitHub Actions | Configurado; pendiente del primer push que lo ejecute |
+| Reporte de Power BI | Pendiente |
 
 ## Datos
 
