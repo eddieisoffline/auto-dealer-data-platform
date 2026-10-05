@@ -24,6 +24,10 @@ pasadas:
 cd infra/terraform
 cp terraform.tfvars.example terraform.tfvars     # pon tu project_id
 gcloud auth application-default login
+gcloud auth application-default set-quota-project <tu-proyecto>
+# El proveedor factura las llamadas al proyecto (user_project_override), así que
+# Terraform necesita esta API habilitada antes de su primera lectura:
+gcloud services enable cloudresourcemanager.googleapis.com --project <tu-proyecto>
 
 # 1) Infraestructura base
 terraform init

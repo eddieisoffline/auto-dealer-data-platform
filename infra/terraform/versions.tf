@@ -20,4 +20,10 @@ terraform {
 provider "google" {
   project = var.project_id
   region  = var.region
+
+  # Con credenciales de usuario (gcloud auth application-default login), algunas
+  # APIs como billingbudgets exigen un quota project; sin esto el proveedor no lo
+  # envía y la llamada se cobra al proyecto del cliente OAuth de gcloud (error 403).
+  user_project_override = true
+  billing_project       = var.project_id
 }

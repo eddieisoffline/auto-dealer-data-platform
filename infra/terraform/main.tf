@@ -10,6 +10,7 @@ locals {
     [
       "artifactregistry.googleapis.com",
       "bigquery.googleapis.com",
+      "cloudresourcemanager.googleapis.com",
       "cloudscheduler.googleapis.com",
       "iam.googleapis.com",
       "run.googleapis.com",
