@@ -22,7 +22,7 @@ variable "bucket_name" {
 }
 
 variable "force_destroy" {
-  description = "Permite que terraform destroy borre el bucket aunque tenga objetos."
+  description = "Permite que terraform destroy borre el bucket y los datasets de BigQuery aunque tengan datos."
   type        = bool
   default     = false
 }
@@ -37,6 +37,17 @@ variable "image" {
   description = "Imagen Docker del pipeline, por ejemplo us-central1-docker.pkg.dev/<proyecto>/pipeline/pipeline:0.1.0."
   type        = string
   default     = ""
+}
+
+variable "images_to_keep" {
+  description = "Imágenes más recientes que conserva Artifact Registry; las anteriores se borran automáticamente."
+  type        = number
+  default     = 5
+
+  validation {
+    condition     = var.images_to_keep >= 1 && var.images_to_keep == floor(var.images_to_keep)
+    error_message = "images_to_keep debe ser un entero mayor o igual que 1."
+  }
 }
 
 variable "job_args" {

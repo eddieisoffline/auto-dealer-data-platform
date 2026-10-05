@@ -69,7 +69,7 @@ resource "google_bigquery_dataset" "dw" {
   dataset_id                 = each.key
   description                = each.value
   location                   = var.bq_location
-  delete_contents_on_destroy = false
+  delete_contents_on_destroy = var.force_destroy
 
   depends_on = [google_project_service.enabled]
 }
@@ -137,6 +137,30 @@ resource "google_artifact_registry_repository" "pipeline" {
   format        = "DOCKER"
   location      = var.region
   description   = "Imágenes del pipeline de datos"
+
+  # Cada push a main sube una imagen nueva. Se conservan las últimas
+  # var.images_to_keep (para poder volver atrás) y se borran las demás, así el
+  # almacenamiento no crece sin límite. KEEP tiene prioridad sobre DELETE.
+  cleanup_policy_dry_run = false
+
+  cleanup_policies {
+    id     = "keep-recent"
+    action = "KEEP"
+
+    most_recent_versions {
+      keep_count = var.images_to_keep
+    }
+  }
+
+  cleanup_policies {
+    id     = "delete-old"
+    action = "DELETE"
+
+    condition {
+      tag_state  = "ANY"
+      older_than = "86400s"
+    }
+  }
 
   depends_on = [google_project_service.enabled]
 }

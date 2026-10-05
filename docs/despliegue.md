@@ -107,3 +107,38 @@ commit:
 gcloud run jobs update dealer-pipeline --region us-central1 \
   --image $REPO/pipeline:<sha-del-commit>
 ```
+
+Artifact Registry conserva solo las últimas `images_to_keep` imágenes (5 por
+defecto) y borra las anteriores con más de un día; solo se puede volver a esas.
+La limpieza la ejecuta Google en segundo plano, así que puede tardar hasta un día
+en aplicarse.
+
+## Costos, pausa y borrado
+
+Con el volumen de este proyecto, todo cabe en los niveles gratuitos de GCP (Cloud
+Run, Cloud Storage en `us-central1`, BigQuery, Scheduler y Secret Manager). Lo
+único que crecería es Artifact Registry, y la limpieza automática lo evita. La
+alerta de presupuesto (`billing_account_id`) solo avisa, no detiene el gasto.
+
+**Pausar** (conserva datos, vistas e historial; Power BI sigue conectado):
+
+```bash
+gcloud scheduler jobs pause  dealer-pipeline-daily --location us-central1
+gcloud scheduler jobs resume dealer-pipeline-daily --location us-central1
+```
+
+**Borrar todo:** el bucket y los datasets están protegidos para no perder datos
+por accidente. Terraform lee esa protección del estado, así que primero hay que
+aplicarla y después destruir:
+
+```bash
+cd infra/terraform
+terraform apply   -var force_destroy=true   # guarda la protección desactivada en el estado
+terraform destroy -var force_destroy=true
+```
+
+Si creaste el job pasando `-var deploy_job=true -var image=...` por línea de
+comandos, ese `apply` también lo elimina; no importa, porque después se destruye todo.
+
+El pool de Workload Identity queda en estado eliminado 30 días: si recreas la
+infraestructura antes, importa o restaura el pool `github` en lugar de crearlo.

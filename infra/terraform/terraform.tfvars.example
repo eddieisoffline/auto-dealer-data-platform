@@ -12,3 +12,10 @@ deploy_job = false
 # Opcional: alerta de presupuesto (ID de tu cuenta de facturación)
 # billing_account_id = "XXXXXX-XXXXXX-XXXXXX"
 # budget_amount      = 5
+
+# Opcional: imágenes que conserva Artifact Registry (por defecto 5)
+# images_to_keep = 5
+
+# Solo para borrar todo: true permite que terraform destroy elimine el bucket y
+# los datasets de BigQuery con sus datos. Aplica antes de destruir (ver docs/despliegue.md).
+# force_destroy = true
