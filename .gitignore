@@ -1,0 +1,15 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+# Datos locales: nunca se suben al repositorio
+data/
+*.csv
+*.parquet
+.env
+# Terraform: el estado y las variables locales no se versionan
+# (SÍ se versiona .terraform.lock.hcl)
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars

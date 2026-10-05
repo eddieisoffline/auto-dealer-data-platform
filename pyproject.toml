@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipeline"
+version = "0.1.0"
+description = "Pipeline de datos para KPIs de concesionarias: ingesta, capas raw/curated y warehouse"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+gcs = ["google-cloud-storage>=2.16"]
+kaggle = ["kaggle>=1.7"]  # fija la versión exacta tras la primera descarga exitosa
+bigquery = ["google-cloud-bigquery>=3.20"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pipeline = ["sql/*.sql"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
