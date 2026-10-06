@@ -52,18 +52,19 @@ flowchart LR
 | Warehouse | BigQuery `dealer_curated` | tablas tipadas, `ventas` particionada por fecha |
 | Consumo | BigQuery `dealer_marts` | dimensiones y vistas de KPIs para Power BI |
 
-## Qué demuestra
+## Alcance técnico
 
-- **Ingeniería de datos:** ingesta idempotente con backfill, Parquet particionado,
-  capas raw y curated, ELT en BigQuery.
+- **Ingeniería de datos:** ingesta idempotente con backfill, Parquet particionado
+  por día y por mes, capas raw y curated, ELT en BigQuery.
 - **Calidad de datos:** validaciones entre capas que detienen el pipeline antes de
-  propagar un lote defectuoso, y datos personales eliminados desde el origen.
-- **Cloud y DevOps:** Terraform, Cloud Run Jobs, Cloud Scheduler, Secret Manager y
-  GitHub Actions con Workload Identity Federation (sin llaves guardadas).
+  propagar un lote defectuoso; los datos personales se eliminan en la carga.
+- **Cloud y DevOps:** Terraform, Cloud Run Jobs, Cloud Scheduler, Secret Manager,
+  Artifact Registry y GitHub Actions con Workload Identity Federation (sin llaves
+  de larga duración).
 - **Ingeniería de software:** funciones puras, almacenamiento intercambiable entre
-  local y GCS, y pruebas unitarias que no necesitan red ni credenciales.
-- **Analítica:** modelo con dimensiones y hechos, y KPIs financieros (utilidad
-  bruta, EBITDA, utilidad neta, cumplimiento de objetivos).
+  disco local y Cloud Storage, y 68 pruebas unitarias sin red ni credenciales.
+- **Analítica:** modelo dimensional en BigQuery y modelo semántico en Power BI con
+  KPIs financieros (utilidad bruta, EBITDA, utilidad neta, cumplimiento de objetivos).
 
 ## Decisiones de diseño
 
@@ -92,9 +93,12 @@ Docker · GitHub Actions · Power BI
 ## Resultado
 
 Carga histórica de 2022 ejecutada en Cloud Run: 10,645 ventas de 28
-concesionarias en 292 días con ventas. Cada paso tarda unos 2–3 minutos
-(backfill 2:12, curate 2:51, warehouse 2:10) y las validaciones pasan sin
-incidencias. Las cifras financieras son sintéticas.
+concesionarias en 292 días con ventas (los 73 días restantes no registran ventas
+en la fuente). Tiempos por paso: backfill 2:12, curate 2:51 y warehouse 2:10
+(min:s). Las validaciones no reportaron incidencias y raw y curated conservan las
+mismas 10,645 filas. En CI/CD, cada push a `main` ejecuta pruebas y validación de
+Terraform y despliega una imagen etiquetada con el SHA del commit. Las cifras
+financieras son sintéticas.
 
 ### Power BI
 
@@ -102,7 +106,10 @@ incidencias. Las cifras financieras son sintéticas.
 ![Comparativo entre concesionarias](docs/img/powerbi-sucursales.png)
 ![Operación diaria con media móvil de 7 días](docs/img/powerbi-diario.png)
 
-El archivo del reporte está en [docs/powerbi/dashboard.pbix](docs/powerbi/dashboard.pbix).
+El reporte se versiona como proyecto de Power BI en
+[docs/powerbi/](docs/powerbi/): modelo semántico en TMDL (relaciones, consultas M y
+42 medidas DAX en texto) y una copia `.pbix` con los datos importados. El modelo
+está documentado en [docs/warehouse.md](docs/warehouse.md#modelo-semántico-power-bi).
 
 ### Plataforma en Google Cloud
 
@@ -112,19 +119,21 @@ El archivo del reporte está en [docs/powerbi/dashboard.pbix](docs/powerbi/dashb
 ![Logs del refresco del warehouse](docs/img/cloud-run-job-logs.png)
 ![CI/CD en GitHub Actions: test, terraform y deploy](docs/img/ci-verde.png)
 
-## Probarlo en local
+## Ejecución local
 
 ```bash
 pip install -e ".[dev,kaggle]"
 pytest
 
-export KAGGLE_API_TOKEN=<tu token>   # PowerShell: $env:KAGGLE_API_TOKEN = "..."
+export KAGGLE_API_TOKEN=<token>
 python -m pipeline.cli backfill --start 2022-01-01 --end 2022-03-31
 python -m pipeline.cli curate   --start 2022-01-01 --end 2022-03-31
 ```
 
-El resultado queda en `data/raw/` y `data/curated/`. Sin conexión, usa
-`PIPELINE_SOURCE=file` y `PIPELINE_SOURCE_CSV=<ruta del CSV>`.
+Con el backend por defecto (`PIPELINE_BACKEND=local`), las capas se escriben en
+`data/raw/` y `data/curated/`. `PIPELINE_SOURCE=file` sustituye la API de Kaggle
+por el CSV indicado en `PIPELINE_SOURCE_CSV`, lo que permite ejecutar el pipeline
+sin conexión.
 
 ## Estructura del repositorio
 
@@ -142,28 +151,18 @@ src/pipeline/
 tests/               pruebas unitarias
 infra/terraform/     infraestructura como código
 .github/workflows/   CI y despliegue
-docs/                documentación, capturas (img/) y reporte de Power BI (powerbi/)
+docs/                documentación técnica y capturas (img/)
+docs/powerbi/        reporte de Power BI: proyecto PBIP (TMDL + PBIR) y copia .pbix
 ```
 
 ## Documentación
 
 - [Caso de estudio (portafolio, ES/EN)](case-study.md)
 - [Arquitectura y decisiones](docs/arquitectura.md)
-- [Warehouse y Power BI](docs/warehouse.md)
-- [Despliegue en Google Cloud](docs/despliegue.md)
-
-## Estado
-
-| Componente | Estado |
-|------------|--------|
-| Ingesta, curated, validaciones y warehouse (código) | Completo, con pruebas unitarias |
-| Infraestructura en GCP (Terraform) | Desplegada: bucket, BigQuery, Secret Manager, Artifact Registry, Cloud Run Job y Scheduler diario |
-| Carga histórica 2022 | Ejecutada en Cloud Run: 10,645 ventas en 292 días con ventas, 28 concesionarias; backfill 2:12, curate 2:51, warehouse 2:10 (min:s) |
-| SQL de BigQuery | Ejecutado: tablas en `dealer_curated` y vistas de KPIs en `dealer_marts` |
-| Despliegue automático con GitHub Actions | Verificado: cada push a `main` prueba, valida Terraform y actualiza el job con una imagen etiquetada con el commit |
-| Reporte de Power BI | Completo: resumen ejecutivo, concesionarias y operación diaria, conectado a `dealer_marts` |
+- [Warehouse y modelo semántico](docs/warehouse.md)
+- [Infraestructura y despliegue](docs/despliegue.md)
 
 ## Datos
 
 Fuente: [Car Sales Report](https://www.kaggle.com/datasets/missionjee/car-sales-report)
-en Kaggle (autor: missionjee). Consulta la licencia del dataset en su página.
+en Kaggle (autor: missionjee). Licencia: la indicada en la página del dataset.

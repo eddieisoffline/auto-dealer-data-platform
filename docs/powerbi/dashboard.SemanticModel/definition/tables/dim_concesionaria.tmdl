@@ -1,0 +1,32 @@
+table dim_concesionaria
+	lineageTag: 0b227053-2f01-45e3-b7fe-e1bbd2ff757b
+
+	column dealer_name
+		dataType: string
+		lineageTag: c3140dab-3f2e-4834-811b-2d90b04879a3
+		summarizeBy: none
+		sourceColumn: dealer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 8ccc1630-350d-416d-bc2b-8d940709f2de
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_concesionaria = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    Proyecto = Source{[Name=ProyectoGCP,Kind="Database"]}[Data],
+				    dealer_marts_Schema = Proyecto{[Name="dealer_marts",Kind="Schema"]}[Data],
+				    dim_concesionaria_View = dealer_marts_Schema{[Name="dim_concesionaria",Kind="View"]}[Data]
+				in
+				    dim_concesionaria_View
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,74 @@
+table kpi_diario
+	lineageTag: 6ee744a7-07e5-4a60-99c3-a2a8980d7ce5
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c3f8cd7e-d5e8-4fac-aa0a-4407f24665c8
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column dealer_name
+		dataType: string
+		lineageTag: b0b19e51-758a-4ee5-b25e-15ea651fe55b
+		summarizeBy: none
+		sourceColumn: dealer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_ventas
+		dataType: int64
+		formatString: 0
+		lineageTag: 084e8d12-bb80-4d02-a270-b46f24027c77
+		summarizeBy: sum
+		sourceColumn: num_ventas
+
+		annotation SummarizationSetBy = Automatic
+
+	column ventas
+		dataType: double
+		lineageTag: 70d0f027-573b-48ca-af88-cc4cc14b88e2
+		summarizeBy: sum
+		sourceColumn: ventas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column costo
+		dataType: double
+		lineageTag: 7b310efd-bc3e-453a-b99b-348eb9f937a9
+		summarizeBy: sum
+		sourceColumn: costo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utilidad_bruta
+		dataType: double
+		lineageTag: 400a6530-a8ff-47b1-812c-b2d6eed31bfc
+		summarizeBy: sum
+		sourceColumn: utilidad_bruta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition kpi_diario = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    Proyecto = Source{[Name=ProyectoGCP,Kind="Database"]}[Data],
+				    dealer_marts_Schema = Proyecto{[Name="dealer_marts",Kind="Schema"]}[Data],
+				    kpi_diario_View = dealer_marts_Schema{[Name="kpi_diario",Kind="View"]}[Data]
+				in
+				    kpi_diario_View
+
+	annotation PBI_ResultType = Table
+

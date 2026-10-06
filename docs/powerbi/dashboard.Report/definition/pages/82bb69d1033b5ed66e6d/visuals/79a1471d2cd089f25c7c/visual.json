@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "79a1471d2cd089f25c7c",
+  "position": {
+    "x": 18.46153846153846,
+    "y": 995.38461538461536,
+    "z": 12000,
+    "height": 77.6923076923077,
+    "width": 170,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Fuente: Kaggle",
+                    "textStyle": {
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Car Sales Report",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#ffffff"
+                    },
+                    "url": "https://www.kaggle.com/datasets/missionjee/car-sales-report"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " · Costos, gastos y objetivos sintéticos",
+                    "textStyle": {
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "baf1ece12e994747a7f8"
+}

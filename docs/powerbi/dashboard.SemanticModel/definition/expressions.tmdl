@@ -1,0 +1,5 @@
+expression ProyectoGCP = "<proyecto>" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 3eff2ec5-33cc-4db6-8953-60f644db3b4f
+
+	annotation PBI_ResultType = Text
+

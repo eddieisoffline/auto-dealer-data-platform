@@ -15,6 +15,9 @@ CLAUDE.md
 *.tfstate
 *.tfstate.*
 terraform.tfvars
+# Power BI (PBIP): caché del modelo y configuración local
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
 # Planes guardados (terraform plan -out): contienen valores de la infraestructura
 tfplan
 *.tfplan

@@ -1,0 +1,30 @@
+relationship a486f533-719c-46f6-8d9e-e549c3579130
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_fecha.fecha
+	toColumn: LocalDateTable_18d045e3-cb03-4a16-b339-a38d8139409d.Date
+
+relationship 94b4b7d0-71c0-42fc-863c-4936fab5f05d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimMes.mes
+	toColumn: LocalDateTable_1c84358e-8f56-454f-9003-10a6b894e0b2.Date
+
+relationship 0ab60225-85b0-c002-fe47-56aeb4a87c9f
+	fromColumn: kpi_mensual.dealer_name
+	toColumn: dim_concesionaria.dealer_name
+
+relationship d1762820-ae79-36c6-88a2-dc590d9a22ac
+	fromColumn: kpi_diario.dealer_name
+	toColumn: dim_concesionaria.dealer_name
+
+relationship 8cc528ae-e558-b7cc-192b-f37571a24512
+	fromColumn: dim_fecha.mes
+	toColumn: DimMes.mes
+
+relationship 27f5f207-c31c-5488-bafe-039bb154f9c3
+	fromColumn: kpi_diario.fecha
+	toColumn: dim_fecha.fecha
+
+relationship f2f19cad-874a-0e2f-a125-c79d82ceb804
+	fromColumn: kpi_mensual.mes
+	toColumn: DimMes.mes
+

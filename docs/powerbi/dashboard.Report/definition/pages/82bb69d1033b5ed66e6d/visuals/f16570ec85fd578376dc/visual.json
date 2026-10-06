@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "f16570ec85fd578376dc",
+  "position": {
+    "x": 18.823529411764707,
+    "y": 104.11764705882354,
+    "z": 1000,
+    "height": 56.470588235294116,
+    "width": 191.1764705882353,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "CAR SALES",
+                    "textStyle": {
+                      "fontFamily": "Arial Unicode MS",
+                      "fontSize": "14pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "REPORT",
+                    "textStyle": {
+                      "fontFamily": "Arial Unicode MS",
+                      "fontSize": "14pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "baf1ece12e994747a7f8"
+}

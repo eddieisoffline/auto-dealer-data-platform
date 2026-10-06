@@ -1,0 +1,396 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "c2ab889456e206011404",
+  "position": {
+    "x": 241.94070080862534,
+    "y": 602.911051212938,
+    "z": 8000,
+    "height": 455.41778975741238,
+    "width": 1648.3018867924527,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_concesionaria"
+                    }
+                  },
+                  "Property": "dealer_name"
+                }
+              },
+              "queryRef": "dim_concesionaria.dealer_name",
+              "nativeQueryRef": "concesionaria",
+              "active": true,
+              "displayName": "concesionaria"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Ventas"
+                }
+              },
+              "queryRef": "kpis.Ventas",
+              "nativeQueryRef": "Ventas",
+              "format": "\\$#,0;(\\$#,0);\\$#,0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Utilidad Bruta"
+                }
+              },
+              "queryRef": "kpis.Utilidad Bruta",
+              "nativeQueryRef": "Utilidad Bruta",
+              "format": "\\$#,0;(\\$#,0);\\$#,0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "EBITDA"
+                }
+              },
+              "queryRef": "kpis.EBITDA",
+              "nativeQueryRef": "EBITDA",
+              "format": "\\$#,0;(\\$#,0);\\$#,0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Margen EBITDA %"
+                }
+              },
+              "queryRef": "kpis.Margen EBITDA %",
+              "nativeQueryRef": "Margen EBITDA %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Cumplimiento %"
+                }
+              },
+              "queryRef": "kpis.Cumplimiento %",
+              "nativeQueryRef": "Cumplimiento de ventas %",
+              "displayName": "Cumplimiento de ventas %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Utilidad Neta"
+                }
+              },
+              "queryRef": "kpis.Utilidad Neta",
+              "nativeQueryRef": "Utilidad Neta",
+              "format": "\\$#,0;(\\$#,0);\\$#,0"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "kpis"
+                  }
+                },
+                "Property": "Ventas"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "811.5600919069121D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_concesionaria.dealer_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.77956857869202D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "kpis.Ventas"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.7795563360448D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "kpis.Utilidad Bruta"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108.49754262930182D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "kpis.EBITDA"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "142.1847400945717D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "kpis.Margen EBITDA %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "183.77955561162844D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "kpis.Cumplimiento %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "115.8719351170852D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "kpis.Utilidad Neta"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "kpis"
+                        }
+                      },
+                      "Property": "Color Signo EBITDA"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "kpis"
+                        }
+                      },
+                      "Property": "Color Fuente Signo EBITDA"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "kpis.Margen EBITDA %"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "kpis"
+                        }
+                      },
+                      "Property": "Color Cumplimiento"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "kpis"
+                        }
+                      },
+                      "Property": "Color Fuente Cumplimiento"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "kpis.Cumplimiento %"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "kpis"
+                        }
+                      },
+                      "Property": "Fondo Top Ventas"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "kpis.Ventas"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalle por concesionaria'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

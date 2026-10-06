@@ -1,0 +1,177 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "89cc28676a67c7134c37",
+  "position": {
+    "x": 241.84744576627011,
+    "y": 708.075577326802,
+    "z": 8000,
+    "height": 365.45836249125261,
+    "width": 1648.5934219734079,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_fecha"
+                    }
+                  },
+                  "Property": "fecha"
+                }
+              },
+              "queryRef": "dim_fecha.fecha",
+              "nativeQueryRef": "fecha",
+              "format": "d"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_diario"
+                    }
+                  },
+                  "Property": "dealer_name"
+                }
+              },
+              "queryRef": "kpi_diario.dealer_name",
+              "nativeQueryRef": "Concesionarias",
+              "displayName": "Concesionarias"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Num Ventas Día"
+                }
+              },
+              "queryRef": "kpis.Num Ventas Día",
+              "nativeQueryRef": "Unidades Vendidas",
+              "displayName": "Unidades Vendidas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Ventas Día"
+                }
+              },
+              "queryRef": "kpis.Ventas Día",
+              "nativeQueryRef": "Ventas Día"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Costo Día"
+                }
+              },
+              "queryRef": "kpis.Costo Día",
+              "nativeQueryRef": "Costo Día"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Utilidad Bruta Día"
+                }
+              },
+              "queryRef": "kpis.Utilidad Bruta Día",
+              "nativeQueryRef": "Utilidad Bruta Día"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpis"
+                    }
+                  },
+                  "Property": "Margen Bruto Día %"
+                }
+              },
+              "queryRef": "kpis.Margen Bruto Día %",
+              "nativeQueryRef": "Margen Bruto Día %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.09237270673331D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_fecha.fecha"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "942.2337463839158D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "kpi_diario.dealer_name"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalle'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

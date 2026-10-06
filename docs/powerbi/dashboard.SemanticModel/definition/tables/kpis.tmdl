@@ -1,0 +1,311 @@
+table kpis
+	lineageTag: 85164cf0-96cf-48fb-9dc1-ec8e07d4b7e6
+
+	measure Ventas = SUM ( kpi_mensual[ventas] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: fb12d7a0-9d66-4b75-bc49-791ed643929a
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Utilidad Bruta' = SUM ( kpi_mensual[utilidad_bruta] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 2208d937-8831-40e3-977a-31ee2ecdf97e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Utilidad Neta' = SUM ( kpi_mensual[utilidad_neta] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: e341cbce-5627-40f9-aee7-fe029f238b1d
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure EBITDA = SUM ( kpi_mensual[ebitda] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: d36a882c-aabe-4eb4-b495-c9b26a92ad53
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Cumplimiento %' = DIVIDE ( [Ventas], SUM ( kpi_mensual[objetivo_ventas] ) )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: e9a65707-0664-4630-a02a-7a716fb3f763
+
+	measure Costo = SUM ( kpi_mensual[costo] )
+		lineageTag: 881ed596-1149-4afe-9eb9-197ea4ae796f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gastos Operativos' = SUM ( kpi_mensual[opex] )
+		lineageTag: 067bb766-ba76-4384-abe8-513cb5b7a748
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Num Ventas' = SUM ( kpi_mensual[num_ventas] )
+		formatString: 0
+		lineageTag: 3ab60d05-6889-4e3c-8155-a069833c87b3
+
+	measure 'Objetivo Ventas' = SUM ( kpi_mensual[objetivo_ventas] )
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: b78fdccc-acd2-48e1-9aab-01290867756b
+
+	measure 'Margen Bruto %' = DIVIDE ( [Utilidad Bruta], [Ventas] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: c047cb00-b0f3-4b63-b65f-1bf0067578f8
+
+	measure 'Margen EBITDA %' = DIVIDE ( [EBITDA], [Ventas] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 470d154e-2112-48ee-85a5-36be84720d96
+
+	measure 'Ticket Promedio' = DIVIDE ( [Ventas], [Num Ventas] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 803b1405-5840-4836-b5be-f91551209bd4
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Brecha vs Objetivo' = [Ventas] - [Objetivo Ventas]
+		lineageTag: d7b020b2-0cf3-44b8-807d-e94ca6bbe488
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ventas Mes Anterior' = ```
+			
+			VAR m = MAX ( DimMes[mes] )
+			RETURN
+			    CALCULATE ( [Ventas], FILTER ( ALL ( DimMes[mes] ), DimMes[mes] = EDATE ( m, -1 ) ) )
+			
+			```
+		lineageTag: d7757e1d-93d4-4976-b128-3609bf5bbdab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ventas vs Mes Anterior %' =
+			
+			DIVIDE ( [Ventas] - [Ventas Mes Anterior], [Ventas Mes Anterior] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: f4d6be2e-0c5f-4ff3-9366-f7fc11a3f341
+
+	measure 'Color Cumplimiento' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( [Cumplimiento %] ), BLANK (),
+			    [Cumplimiento %] >= 1,    "#2E7D32",
+			    [Cumplimiento %] >= 0.9,  "#F9A825",
+			    "#C62828"
+			)
+		lineageTag: 8b1e1ce7-b20e-4031-92b2-be281d4a4908
+
+	measure 'Ventas Día' = SUM ( kpi_diario[ventas] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 86c2cb3b-38eb-4bf9-8ac0-ddd7cc7217c2
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Utilidad Bruta Día' = SUM ( kpi_diario[utilidad_bruta] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 23bfc6e5-b688-417c-9c11-f33f55cc1cad
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Ventas Media Móvil 7d' =
+			
+			VAR fin = MAX ( dim_fecha[fecha] )
+			VAR ventana =
+			    FILTER ( ALL ( dim_fecha[fecha] ), dim_fecha[fecha] > fin - 7 && dim_fecha[fecha] <= fin )
+			RETURN
+			    DIVIDE ( CALCULATE ( [Ventas Día], ventana, ALL ( DimMes ) ), 7 )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 705da019-cc39-4aba-a5e3-21988bfc2dc0
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Margen Neto %' = DIVIDE([Utilidad Neta], [Ventas])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0b838250-c190-473e-91f2-12a19aef0cf4
+
+	measure 'Color Signo EBITDA' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( [Margen EBITDA %] ), BLANK (),
+			    [Margen EBITDA %] < 0, "#C62828",
+			    "#2E7D32"
+			)
+		lineageTag: bb824809-7a8a-426e-8d44-6b99421d36c0
+
+	measure 'Color Margen Bruto' =
+			
+			SWITCH ( TRUE (),
+			    ISBLANK ( [Margen Bruto %] ), BLANK (),
+			    [Margen Bruto %] < 0, "#C62828",
+			    "#2E7D32" )
+		lineageTag: ae7ea9ff-8ce7-468c-a8c8-97f7d041d470
+
+	measure 'Color Margen Neto' =
+			
+			SWITCH ( TRUE (),
+			    ISBLANK ( [Margen Neto %] ), BLANK (),
+			    [Margen Neto %] < 0, "#C62828",
+			    "#2E7D32" )
+		lineageTag: 8ba2ba10-9433-4b0d-a9d0-0c7bcee052d0
+
+	measure 'Color Brecha Cumplimiento' =
+			
+			SWITCH ( TRUE (),
+			    ISBLANK ( [Brecha vs Objetivo] ), BLANK (),
+			    [Brecha vs Objetivo] < 0, "#C62828",
+			    "#2E7D32" )
+		lineageTag: ca214661-1904-4426-b3ad-4fb586ca716d
+
+	measure 'Color Ventas vs Mes Anterior' =
+			
+			SWITCH ( TRUE (),
+			    ISBLANK ( [Ventas vs Mes Anterior %] ), BLANK (),
+			    [Ventas vs Mes Anterior %] < 0, "#C62828",
+			    "#2E7D32" )
+		lineageTag: f5caa26f-ed13-41d6-a428-f7e73c6ca036
+
+	measure 'Monto Paso' =
+			
+			SWITCH (
+			    SELECTEDVALUE ( CascadaPasos[Orden] ),
+			    2, [Costo],
+			    4, [Gastos Operativos],
+			    6, SUM ( kpi_mensual[depreciacion] ),
+			    7, SUM ( kpi_mensual[intereses] ),
+			    8, SUM ( kpi_mensual[impuestos] )
+			)
+		lineageTag: 0b969468-a07e-4cd3-b2ad-19af7562cbab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nivel Paso' =
+			
+			VAR o   = SELECTEDVALUE ( CascadaPasos[Orden] )
+			VAR dep = SUM ( kpi_mensual[depreciacion] )
+			VAR int = SUM ( kpi_mensual[intereses] )
+			RETURN
+			SWITCH (
+			    o,
+			    1, [Ventas],
+			    2, [Utilidad Bruta],
+			    3, [Utilidad Bruta],
+			    4, [EBITDA],
+			    5, [EBITDA],
+			    6, [EBITDA] - dep,
+			    7, [EBITDA] - dep - int,
+			    8, [Utilidad Neta],
+			    9, [Utilidad Neta]
+			)
+		lineageTag: 1369ddde-8799-48d7-b8da-5459369f16c1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cascada Base' = ```
+			IF ( SELECTEDVALUE ( CascadaPasos[Tipo] ) = "Baja",  [Nivel Paso] )
+			
+			```
+		lineageTag: e5b2cd03-5f19-4000-84f7-4f314c19d33f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cascada Total' = ```
+			IF ( SELECTEDVALUE ( CascadaPasos[Tipo] ) = "Total", [Nivel Paso] )
+			
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 60694042-518d-4197-8652-fac20fbd1956
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Cascada Baja' = IF ( SELECTEDVALUE ( CascadaPasos[Tipo] ) = "Baja",  [Monto Paso] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: c56b6f66-cc62-4e8b-8bbe-5d9fd0e30e30
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'maximo eje cascada' = [Cascada Total] *1.1
+		lineageTag: 25ea65f1-3952-4310-abd0-785aca9bd727
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'pp vs objetivo' = [Cumplimiento %] -1
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: b6137e3b-c76f-4afd-9b51-7addb1b58c7c
+
+	measure 'Color Signo pp vs objetivo' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ([pp vs objetivo] ), BLANK (),
+			    [pp vs objetivo] < 0, "#C62828",
+			    "#2E7D32"
+			)
+		lineageTag: dc1a8b7f-50c3-4cbc-83c7-76ec89fa2591
+
+	measure 'Ventas Máx Contexto' =
+			
+			MAXX ( ALLSELECTED ( dim_concesionaria[dealer_name] ), [Ventas] )
+		lineageTag: a8877e3c-86f4-4c7a-8474-7ff46293d993
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Es Top Ventas' =
+			
+			AND ( NOT ISBLANK ( [Ventas] ), [Ventas] = [Ventas Máx Contexto] )
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e3699066-57c8-4998-92bf-fad3708a8b03
+
+	measure 'Color Barra Ventas' =
+			
+			IF ( [Es Top Ventas], "#1F4E79", "#9DB9D2" )
+		lineageTag: cca953e6-6cd7-4aa3-8e4f-24e41a834ba2
+
+	measure 'Fondo Top Ventas' =
+			
+			IF ( [Es Top Ventas], "#FFF3CD", BLANK () )
+		lineageTag: 4d952662-3199-407c-b7bd-247051294890
+
+	measure 'Color Fuente Cumplimiento' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( [Cumplimiento %] ), BLANK (),
+			    [Cumplimiento %] >= 0.9 && [Cumplimiento %] < 1, "#1F2933",   // sobre ámbar
+			    "#FFFFFF"                                                      // sobre verde y rojo
+			)
+		lineageTag: 8863423e-5555-4841-8332-c4afb833ebd4
+
+	measure 'Color Fuente Signo EBITDA' =
+			
+			IF ( ISBLANK ( [Margen EBITDA %] ), BLANK (), "#FFFFFF" )
+		lineageTag: fae34e8f-ab17-4453-920f-b8b49578f3a7
+
+	measure 'Costo Día' = SUM ( kpi_diario[costo] )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: ce358a82-1a95-4522-a0ea-d5d02409f17e
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Num Ventas Día' = SUM ( kpi_diario[num_ventas] )
+		formatString: 0
+		lineageTag: beba1a2c-30ab-48d0-84f9-a7600f2d1cd3
+
+	measure 'Margen Bruto Día %' = DIVIDE ( [Utilidad Bruta Día], [Ventas Día] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 611b6aa8-9d9b-48ff-a853-95cef1877fe5
+
+	partition kpis = m
+		mode: import
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Column1"})
+				in
+				  #"Removed Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,67 @@
+table dim_fecha
+	lineageTag: b3c3a1cd-2ec8-4f6d-b518-59f2b90c0004
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4f46f560-c50a-49eb-9ae1-c517c93a7411
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variation
+			isDefault
+			relationship: a486f533-719c-46f6-8d9e-e549c3579130
+			defaultHierarchy: LocalDateTable_18d045e3-cb03-4a16-b339-a38d8139409d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2d27ce4e-8eef-4f74-b7f7-d499b0326472
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a9f41ff-74d9-4812-8ba6-dc9b08142c99
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_numero
+		dataType: int64
+		formatString: 0
+		lineageTag: c23b81dc-d58e-4cf4-a141-8497077d9fd3
+		summarizeBy: sum
+		sourceColumn: mes_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_mes
+		dataType: string
+		lineageTag: 5b39eb80-2af4-4fa4-aff0-a50c0cdcae9e
+		summarizeBy: none
+		sourceColumn: anio_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_fecha = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    Proyecto = Source{[Name=ProyectoGCP,Kind="Database"]}[Data],
+				    dealer_marts_Schema = Proyecto{[Name="dealer_marts",Kind="Schema"]}[Data],
+				    dim_fecha_View = dealer_marts_Schema{[Name="dim_fecha",Kind="View"]}[Data]
+				in
+				    dim_fecha_View
+

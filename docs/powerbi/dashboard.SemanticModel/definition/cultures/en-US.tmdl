@@ -1,0 +1,6076 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_fecha": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.fecha.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.fecha.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.fecha.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.fecha.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.fecha.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_fecha.anio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "anio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "mes_numero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.anio_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fecha",
+			          "ConceptualProperty": "anio_mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anio me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "anio_mes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_concesionaria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_concesionaria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim concesionaria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_concesionaria": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_concesionaria.dealer_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_concesionaria",
+			          "ConceptualProperty": "dealer_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dealer name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dealer_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dealer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dealer nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "seller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "merchant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "broker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "concesionaria": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_concesionaria.region": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_concesionaria",
+			          "ConceptualProperty": "region"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "region": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "continent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_diario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_diario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kpi diario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kpi_diario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_diario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_diario",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "kpi_diario.dealer_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_diario",
+			          "ConceptualProperty": "dealer_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "dealer name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dealer_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dealer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dealer nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "seller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "merchant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "broker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Concesionarias": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_diario.num_venta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_diario",
+			          "ConceptualProperty": "num_ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "num venta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "num_ventas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "number venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_diario.venta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_diario",
+			          "ConceptualProperty": "ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "venta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_diario.costo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_diario",
+			          "ConceptualProperty": "costo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_diario.utilidad_bruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_diario",
+			          "ConceptualProperty": "utilidad_bruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad bruta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "utilidad_bruta": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kpi mensual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "kpi_mensual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.dealer_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "dealer_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "dealer name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dealer_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dealer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dealer nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dealer tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "seller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "merchant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "broker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "kpi_mensual.num_venta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "num_ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "num venta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "num_ventas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "number venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.venta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "venta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.costo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "costo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.utilidad_bruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "utilidad_bruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad bruta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "utilidad_bruta": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.opex": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "opex"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opex": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.ebitda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "ebitda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ebitda": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.depreciacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "depreciacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "depreciacion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.interese": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "intereses"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "interese": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.impuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "impuestos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "impuesto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.utilidad_neta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "utilidad_neta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad neta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "utilidad_neta": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.objetivo_venta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "objetivo_ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "objetivo venta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "objetivo_ventas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.ticket_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "ticket_promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket promedio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ticket_promedio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.margen_bruto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "margen_bruto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margen bruto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margen_bruto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.margen_ebitda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "margen_ebitda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margen ebitda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margen_ebitda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_mensual.cumplimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_mensual",
+			          "ConceptualProperty": "cumplimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cumplimiento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kpis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.utilidad_bruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Utilidad Bruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad bruta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.utilidad_neta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Utilidad Neta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad neta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ebitda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "EBITDA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ebitda": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.cumplimiento_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Cumplimiento %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cumplimiento %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cumplimiento percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cumplimiento pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Cumplimiento de ventas %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.costo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Costo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.gastos_operativos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Gastos Operativos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gastos operativos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.num_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Num Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "num ventas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "number venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Unidades Vendidas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.objetivo_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Objetivo Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "objetivo ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.margen_bruto_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Margen Bruto %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margen bruto %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margen bruto percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "margen bruto pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.margen_EBITDA_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Margen EBITDA %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margen EBITDA %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margen ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "margen ebitda pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ticket_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Ticket Promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket promedio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.brecha_vs_objetivo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Brecha vs Objetivo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brecha vs objetivo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ventas_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Ventas Mes Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas mes anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ventas_vs_mes_anterior_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Ventas vs Mes Anterior %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas vs mes anterior %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "venta vs me anterior percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "venta vs me anterior pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_cumplimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Cumplimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color cumplimiento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ventas_día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Ventas Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.utilidad_bruta_día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Utilidad Bruta Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad bruta día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ventas_media_móvil_7d": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Ventas Media Móvil 7d"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas media móvil 7d": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.margen_neto_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Margen Neto %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margen neto %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margen neto percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "margen neto pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_signo_EBITDA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Signo EBITDA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color signo EBITDA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_margen_bruto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Margen Bruto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color margen bruto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_margen_neto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Margen Neto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color margen neto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_brecha_cumplimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Brecha Cumplimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color brecha cumplimiento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_ventas_vs_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Ventas vs Mes Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color ventas vs mes anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.monto_paso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Monto Paso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monto paso": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.nivel_paso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Nivel Paso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel paso": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.cascada_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Cascada Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cascada base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cascada headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "cascada center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "cascada seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "cascada station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "cascada pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.cascada_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Cascada Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cascada total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cascada aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "cascada overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.cascada_baja": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Cascada Baja"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cascada baja": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.maximo_eje_cascada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "maximo eje cascada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "maximo eje cascada": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.pp_vs_objetivo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "pp vs objetivo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pp vs objetivo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_signo_pp_vs_objetivo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Signo pp vs objetivo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color signo pp vs objetivo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DimMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_me.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMes",
+			          "ConceptualProperty": "mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_me.me.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMes",
+			          "VariationSource": "mes",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_me.me.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMes",
+			          "VariationSource": "mes",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_me.me.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMes",
+			          "VariationSource": "mes",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_me.me.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMes",
+			          "VariationSource": "mes",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_me.me.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMes",
+			          "VariationSource": "mes",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "cascada_paso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CascadaPasos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cascada paso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CascadaPasos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cascada_paso.paso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CascadaPasos",
+			          "ConceptualProperty": "Paso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "paso": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cascada_paso.orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CascadaPasos",
+			          "ConceptualProperty": "Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orden": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cascada_paso.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CascadaPasos",
+			          "ConceptualProperty": "Tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.ventas_máx_contexto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Ventas Máx Contexto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ventas máx contexto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.es_top_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Es Top Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es top ventas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "es best venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "es first venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "es leading venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "es maximum venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "es peak venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "es upper venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_barra_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Barra Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color barra ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.fondo_top_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Fondo Top Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fondo top ventas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fondo best venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "fondo first venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "fondo leading venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "fondo maximum venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "fondo peak venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "fondo upper venta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_fuente_cumplimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Fuente Cumplimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color fuente cumplimiento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.color_fuente_signo_EBITDA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Color Fuente Signo EBITDA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color fuente signo EBITDA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.costo_día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Costo Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.num_ventas_día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Num Ventas Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "num ventas día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "number venta día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Unidades Vendidas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpis.margen_bruto_día_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpis",
+			          "ConceptualProperty": "Margen Bruto Día %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margen bruto día %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margen bruto día percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "margen bruto día pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dim_me_me_date_hierarchy_has_dim_me_me_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_me.me.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_me.me.date_hierarchy"
+			          }
+			        },
+			        "dim_me.me.day": {
+			          "Target": {
+			            "Entity": "dim_me.me.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me.me.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_me.me.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_date_hierarchy_have_me_day"
+			        }
+			      ]
+			    },
+			    "dim_me_me_date_hierarchy_has_dim_me_me_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_me.me.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_me.me.date_hierarchy"
+			          }
+			        },
+			        "dim_me.me.month": {
+			          "Target": {
+			            "Entity": "dim_me.me.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me.me.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_me.me.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_date_hierarchy_have_me_month"
+			        }
+			      ]
+			    },
+			    "dim_me_me_date_hierarchy_has_dim_me_me_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_me.me.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_me.me.date_hierarchy"
+			          }
+			        },
+			        "dim_me.me.quarter": {
+			          "Target": {
+			            "Entity": "dim_me.me.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me.me.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_me.me.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_date_hierarchy_have_me_quarter"
+			        }
+			      ]
+			    },
+			    "dim_me_me_date_hierarchy_has_dim_me_me_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_me.me.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_me.me.date_hierarchy"
+			          }
+			        },
+			        "dim_me.me.year": {
+			          "Target": {
+			            "Entity": "dim_me.me.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me.me.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_me.me.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_date_hierarchy_have_me_year"
+			        }
+			      ]
+			    },
+			    "dim_me_me_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_me.me": {
+			          "Target": {
+			            "Entity": "dim_me.me"
+			          }
+			        },
+			        "dim_me.me.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_me.me.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me.me"
+			            },
+			            "Object": {
+			              "Role": "dim_me.me.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_me_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "dim_fecha_fecha_date_hierarchy_has_dim_fecha_fecha_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.date_hierarchy"
+			          }
+			        },
+			        "dim_fecha.fecha.day": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_days"
+			        }
+			      ]
+			    },
+			    "dim_fecha_fecha_date_hierarchy_has_dim_fecha_fecha_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.date_hierarchy"
+			          }
+			        },
+			        "dim_fecha.fecha.month": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months"
+			        }
+			      ]
+			    },
+			    "dim_fecha_fecha_date_hierarchy_has_dim_fecha_fecha_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.date_hierarchy"
+			          }
+			        },
+			        "dim_fecha.fecha.quarter": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
+			        }
+			      ]
+			    },
+			    "dim_fecha_fecha_date_hierarchy_has_dim_fecha_fecha_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.date_hierarchy"
+			          }
+			        },
+			        "dim_fecha.fecha.year": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_years"
+			        }
+			      ]
+			    },
+			    "dim_fecha_fecha_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha.fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha"
+			          }
+			        },
+			        "dim_fecha.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha.fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_fecha_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_dim_me": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "dim_me": {
+			          "Target": {
+			            "Entity": "dim_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "dim_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_dim_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_me_have_kpi_mensuals"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_dim_concesionaria": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          },
+			          "Nouns": [
+			            {
+			              "dealer": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "dim_concesionaria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_dim_concesionarias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_kpi_mensuals"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_dim_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_dim_fechas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "kpi_diario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_kpi_diarios"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_dim_concesionaria": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          },
+			          "Nouns": [
+			            {
+			              "dealer": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "dim_concesionaria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_dim_concesionarias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "kpi_diario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_kpi_diarios"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_dim_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_me": {
+			          "Target": {
+			            "Entity": "dim_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_dim_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_me_have_dim_fechas"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_kpis_margen_bruto_día_": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpis.margen_bruto_día_": {
+			          "Target": {
+			            "Entity": "kpis.margen_bruto_día_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpis.margen_bruto_día_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_margen_bruto_día_"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_kpis_num_ventas_día": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpis.num_ventas_día": {
+			          "Target": {
+			            "Entity": "kpis.num_ventas_día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpis.num_ventas_día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_num_ventas_día"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_kpis_costo_día": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpis.costo_día": {
+			          "Target": {
+			            "Entity": "kpis.costo_día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpis.costo_día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_costo_día"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_fuente_signo_EBITDA": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_fuente_signo_EBITDA": {
+			          "Target": {
+			            "Entity": "kpis.color_fuente_signo_EBITDA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_fuente_signo_EBITDA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_fuente_signo_EBITDA"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_fuente_cumplimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_fuente_cumplimiento": {
+			          "Target": {
+			            "Entity": "kpis.color_fuente_cumplimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_fuente_cumplimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_fuente_cumplimiento"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_fondo_top_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.fondo_top_ventas": {
+			          "Target": {
+			            "Entity": "kpis.fondo_top_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.fondo_top_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_fondo_top_ventas"
+			        }
+			      ]
+			    },
+			    "dim_concesionaria_has_kpis_fondo_top_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_concesionaria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          }
+			        },
+			        "kpis.fondo_top_ventas": {
+			          "Target": {
+			            "Entity": "kpis.fondo_top_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "kpis.fondo_top_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_fondo_top_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_barra_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_barra_ventas": {
+			          "Target": {
+			            "Entity": "kpis.color_barra_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_barra_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_barra_ventas"
+			        }
+			      ]
+			    },
+			    "dim_concesionaria_has_kpis_color_barra_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_concesionaria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          }
+			        },
+			        "kpis.color_barra_ventas": {
+			          "Target": {
+			            "Entity": "kpis.color_barra_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_barra_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_color_barra_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_es_top_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.es_top_ventas": {
+			          "Target": {
+			            "Entity": "kpis.es_top_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.es_top_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_es_top_ventas"
+			        }
+			      ]
+			    },
+			    "dim_concesionaria_has_kpis_es_top_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_concesionaria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          }
+			        },
+			        "kpis.es_top_ventas": {
+			          "Target": {
+			            "Entity": "kpis.es_top_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "kpis.es_top_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_es_top_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_ventas_máx_contexto": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.ventas_máx_contexto": {
+			          "Target": {
+			            "Entity": "kpis.ventas_máx_contexto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.ventas_máx_contexto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ventas_máx_contexto"
+			        }
+			      ]
+			    },
+			    "dim_concesionaria_has_kpis_ventas_máx_contexto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_concesionaria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          }
+			        },
+			        "kpis.ventas_máx_contexto": {
+			          "Target": {
+			            "Entity": "kpis.ventas_máx_contexto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "kpis.ventas_máx_contexto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_ventas_máx_contexto"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "cascada_paso.tipo": {
+			          "Target": {
+			            "Entity": "cascada_paso.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "cascada_paso.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_tipos"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_orden": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "cascada_paso.orden": {
+			          "Target": {
+			            "Entity": "cascada_paso.orden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "cascada_paso.orden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_ordens"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_paso": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "cascada_paso.paso": {
+			          "Target": {
+			            "Entity": "cascada_paso.paso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "cascada_paso.paso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_paso"
+			        }
+			      ]
+			    },
+			    "dim_me_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_me": {
+			          "Target": {
+			            "Entity": "dim_me"
+			          }
+			        },
+			        "dim_me.me": {
+			          "Target": {
+			            "Entity": "dim_me.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_me"
+			            },
+			            "Object": {
+			              "Role": "dim_me.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_me_have_me"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_signo_pp_vs_objetivo": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_signo_pp_vs_objetivo": {
+			          "Target": {
+			            "Entity": "kpis.color_signo_pp_vs_objetivo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_signo_pp_vs_objetivo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_signo_pp_vs_objetivo"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_pp_vs_objetivo": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.pp_vs_objetivo": {
+			          "Target": {
+			            "Entity": "kpis.pp_vs_objetivo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.pp_vs_objetivo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_pp_vs_objetivo"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_maximo_eje_cascada": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.maximo_eje_cascada": {
+			          "Target": {
+			            "Entity": "kpis.maximo_eje_cascada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.maximo_eje_cascada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_maximo_eje_cascada"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_kpis_maximo_eje_cascada": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "kpis.maximo_eje_cascada": {
+			          "Target": {
+			            "Entity": "kpis.maximo_eje_cascada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "kpis.maximo_eje_cascada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_maximo_eje_cascada"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_cascada_baja": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.cascada_baja": {
+			          "Target": {
+			            "Entity": "kpis.cascada_baja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.cascada_baja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_cascada_baja"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_kpis_cascada_baja": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "kpis.cascada_baja": {
+			          "Target": {
+			            "Entity": "kpis.cascada_baja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "kpis.cascada_baja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_cascada_baja"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_cascada_total": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.cascada_total": {
+			          "Target": {
+			            "Entity": "kpis.cascada_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.cascada_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_cascada_total"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_kpis_cascada_total": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "kpis.cascada_total": {
+			          "Target": {
+			            "Entity": "kpis.cascada_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "kpis.cascada_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_cascada_total"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_cascada_base": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.cascada_base": {
+			          "Target": {
+			            "Entity": "kpis.cascada_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.cascada_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_cascada_base"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_kpis_cascada_base": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "kpis.cascada_base": {
+			          "Target": {
+			            "Entity": "kpis.cascada_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "kpis.cascada_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_cascada_base"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_nivel_paso": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.nivel_paso": {
+			          "Target": {
+			            "Entity": "kpis.nivel_paso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.nivel_paso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_nivel_paso"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_kpis_nivel_paso": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "kpis.nivel_paso": {
+			          "Target": {
+			            "Entity": "kpis.nivel_paso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "kpis.nivel_paso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_nivel_paso"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_monto_paso": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.monto_paso": {
+			          "Target": {
+			            "Entity": "kpis.monto_paso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.monto_paso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_monto_paso"
+			        }
+			      ]
+			    },
+			    "cascada_paso_has_kpis_monto_paso": {
+			      "Binding": {
+			        "ConceptualEntity": "CascadaPasos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cascada_paso": {
+			          "Target": {
+			            "Entity": "cascada_paso"
+			          }
+			        },
+			        "kpis.monto_paso": {
+			          "Target": {
+			            "Entity": "kpis.monto_paso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cascada_paso"
+			            },
+			            "Object": {
+			              "Role": "kpis.monto_paso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cascada_paso_have_monto_paso"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_ventas_vs_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_ventas_vs_mes_anterior": {
+			          "Target": {
+			            "Entity": "kpis.color_ventas_vs_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_ventas_vs_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_ventas_vs_mes_anterior"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_brecha_cumplimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_brecha_cumplimiento": {
+			          "Target": {
+			            "Entity": "kpis.color_brecha_cumplimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_brecha_cumplimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_brecha_cumplimiento"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_margen_neto": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_margen_neto": {
+			          "Target": {
+			            "Entity": "kpis.color_margen_neto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_margen_neto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_margen_neto"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_margen_bruto": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_margen_bruto": {
+			          "Target": {
+			            "Entity": "kpis.color_margen_bruto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_margen_bruto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_margen_bruto"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_signo_EBITDA": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_signo_EBITDA": {
+			          "Target": {
+			            "Entity": "kpis.color_signo_EBITDA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_signo_EBITDA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_signo_EBITDA"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_margen_neto_": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.margen_neto_": {
+			          "Target": {
+			            "Entity": "kpis.margen_neto_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.margen_neto_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_margen_neto_"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_kpis_ventas_media_móvil_7d": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpis.ventas_media_móvil_7d": {
+			          "Target": {
+			            "Entity": "kpis.ventas_media_móvil_7d"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpis.ventas_media_móvil_7d"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_ventas_media_móvil_7d"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_kpis_utilidad_bruta_día": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpis.utilidad_bruta_día": {
+			          "Target": {
+			            "Entity": "kpis.utilidad_bruta_día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpis.utilidad_bruta_día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_utilidad_bruta_día"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_kpis_ventas_día": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpis.ventas_día": {
+			          "Target": {
+			            "Entity": "kpis.ventas_día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpis.ventas_día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_ventas_día"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_color_cumplimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.color_cumplimiento": {
+			          "Target": {
+			            "Entity": "kpis.color_cumplimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.color_cumplimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_color_cumplimiento"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_ventas_vs_mes_anterior_": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.ventas_vs_mes_anterior_": {
+			          "Target": {
+			            "Entity": "kpis.ventas_vs_mes_anterior_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.ventas_vs_mes_anterior_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ventas_vs_mes_anterior_"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_ventas_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.ventas_mes_anterior": {
+			          "Target": {
+			            "Entity": "kpis.ventas_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.ventas_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ventas_mes_anterior"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_brecha_vs_objetivo": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.brecha_vs_objetivo": {
+			          "Target": {
+			            "Entity": "kpis.brecha_vs_objetivo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.brecha_vs_objetivo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_brecha_vs_objetivo"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_ticket_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.ticket_promedio": {
+			          "Target": {
+			            "Entity": "kpis.ticket_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.ticket_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ticket_promedio"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_margen_EBITDA_": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.margen_EBITDA_": {
+			          "Target": {
+			            "Entity": "kpis.margen_EBITDA_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.margen_EBITDA_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_margen_EBITDA_"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_margen_bruto_": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.margen_bruto_": {
+			          "Target": {
+			            "Entity": "kpis.margen_bruto_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.margen_bruto_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_margen_bruto_"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_objetivo_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.objetivo_ventas": {
+			          "Target": {
+			            "Entity": "kpis.objetivo_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.objetivo_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_objetivo_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_num_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.num_ventas": {
+			          "Target": {
+			            "Entity": "kpis.num_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.num_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_num_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_gastos_operativos": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.gastos_operativos": {
+			          "Target": {
+			            "Entity": "kpis.gastos_operativos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.gastos_operativos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_gastos_operativos"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_costo": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.costo": {
+			          "Target": {
+			            "Entity": "kpis.costo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.costo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_costo"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_cumplimiento_": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.cumplimiento_": {
+			          "Target": {
+			            "Entity": "kpis.cumplimiento_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.cumplimiento_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_cumplimiento_"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_ebitda": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.ebitda": {
+			          "Target": {
+			            "Entity": "kpis.ebitda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.ebitda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ebitda"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_utilidad_neta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.utilidad_neta": {
+			          "Target": {
+			            "Entity": "kpis.utilidad_neta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.utilidad_neta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_utilidad_neta"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_utilidad_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.utilidad_bruta": {
+			          "Target": {
+			            "Entity": "kpis.utilidad_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.utilidad_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_utilidad_bruta"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_kpis_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpis.ventas": {
+			          "Target": {
+			            "Entity": "kpis.ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpis.ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_cumplimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.cumplimiento": {
+			          "Target": {
+			            "Entity": "kpi_mensual.cumplimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.cumplimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_cumplimientos"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_margen_ebitda": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.margen_ebitda": {
+			          "Target": {
+			            "Entity": "kpi_mensual.margen_ebitda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.margen_ebitda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_margen_ebitda"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_margen_bruto": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.margen_bruto": {
+			          "Target": {
+			            "Entity": "kpi_mensual.margen_bruto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.margen_bruto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_margen_brutos"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_ticket_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.ticket_promedio": {
+			          "Target": {
+			            "Entity": "kpi_mensual.ticket_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.ticket_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ticket_promedios"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_objetivo_venta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.objetivo_venta": {
+			          "Target": {
+			            "Entity": "kpi_mensual.objetivo_venta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.objetivo_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_objetivo_ventas1"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_utilidad_neta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.utilidad_neta": {
+			          "Target": {
+			            "Entity": "kpi_mensual.utilidad_neta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.utilidad_neta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_utilidad_netas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_impuesto": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.impuesto": {
+			          "Target": {
+			            "Entity": "kpi_mensual.impuesto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.impuesto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_impuestos"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_interese": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.interese": {
+			          "Target": {
+			            "Entity": "kpi_mensual.interese"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.interese"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_intereses"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_depreciacion": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.depreciacion": {
+			          "Target": {
+			            "Entity": "kpi_mensual.depreciacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.depreciacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_depreciacions"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_ebitda": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.ebitda": {
+			          "Target": {
+			            "Entity": "kpi_mensual.ebitda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.ebitda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ebitda1"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_opex": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.opex": {
+			          "Target": {
+			            "Entity": "kpi_mensual.opex"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.opex"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_opexes"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_utilidad_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.utilidad_bruta": {
+			          "Target": {
+			            "Entity": "kpi_mensual.utilidad_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.utilidad_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_utilidad_brutas"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_costo": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.costo": {
+			          "Target": {
+			            "Entity": "kpi_mensual.costo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.costo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_costos"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_venta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.venta": {
+			          "Target": {
+			            "Entity": "kpi_mensual.venta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_ventas1"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_num_venta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.num_venta": {
+			          "Target": {
+			            "Entity": "kpi_mensual.num_venta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.num_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_num_ventas1"
+			        }
+			      ]
+			    },
+			    "kpi_mensual_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_mensual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_mensual": {
+			          "Target": {
+			            "Entity": "kpi_mensual"
+			          }
+			        },
+			        "kpi_mensual.me": {
+			          "Target": {
+			            "Entity": "kpi_mensual.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_mensual"
+			            },
+			            "Object": {
+			              "Role": "kpi_mensual.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_mensuals_have_me"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_utilidad_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpi_diario.utilidad_bruta": {
+			          "Target": {
+			            "Entity": "kpi_diario.utilidad_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpi_diario.utilidad_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_utilidad_brutas"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_costo": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpi_diario.costo": {
+			          "Target": {
+			            "Entity": "kpi_diario.costo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpi_diario.costo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_costos"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_venta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpi_diario.venta": {
+			          "Target": {
+			            "Entity": "kpi_diario.venta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpi_diario.venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_num_venta": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpi_diario.num_venta": {
+			          "Target": {
+			            "Entity": "kpi_diario.num_venta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpi_diario.num_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_num_ventas"
+			        }
+			      ]
+			    },
+			    "kpi_diario_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "kpi_diario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "kpi_diario": {
+			          "Target": {
+			            "Entity": "kpi_diario"
+			          }
+			        },
+			        "kpi_diario.fecha": {
+			          "Target": {
+			            "Entity": "kpi_diario.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "kpi_diario"
+			            },
+			            "Object": {
+			              "Role": "kpi_diario.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "kpi_diarios_have_fechas"
+			        }
+			      ]
+			    },
+			    "dim_concesionaria_has_region": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_concesionaria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          }
+			        },
+			        "dim_concesionaria.region": {
+			          "Target": {
+			            "Entity": "dim_concesionaria.region"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "dim_concesionaria.region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_regions"
+			        }
+			      ]
+			    },
+			    "dim_concesionaria_has_dealer_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_concesionaria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          }
+			        },
+			        "dim_concesionaria.dealer_name": {
+			          "Target": {
+			            "Entity": "dim_concesionaria.dealer_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Object": {
+			              "Role": "dim_concesionaria.dealer_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_have_dealer_names"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_anio_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.anio_me": {
+			          "Target": {
+			            "Entity": "dim_fecha.anio_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.anio_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_anio_me"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.mes_numero": {
+			          "Target": {
+			            "Entity": "dim_fecha.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_mes_numeros"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_anio": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.anio": {
+			          "Target": {
+			            "Entity": "dim_fecha.anio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.anio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_anios"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.me": {
+			          "Target": {
+			            "Entity": "dim_fecha.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_fechas"
+			        }
+			      ]
+			    },
+			    "dim_concesionaria_in_region": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_concesionaria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_concesionaria": {
+			          "Target": {
+			            "Entity": "dim_concesionaria"
+			          }
+			        },
+			        "dim_concesionaria.region": {
+			          "Target": {
+			            "Entity": "dim_concesionaria.region"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_concesionaria.region"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_concesionaria"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_concesionaria.region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_concesionarias_are_in_regions"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

@@ -1,0 +1,28 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dim_fecha","dim_concesionaria","kpi_diario","kpi_mensual","kpis"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_fecha
+ref table DateTableTemplate_11c98616-c35b-4185-8ebd-5b6a819d66d1
+ref table LocalDateTable_18d045e3-cb03-4a16-b339-a38d8139409d
+ref table dim_concesionaria
+ref table kpi_diario
+ref table kpi_mensual
+ref table kpis
+ref table DimMes
+ref table LocalDateTable_1c84358e-8f56-454f-9003-10a6b894e0b2
+ref table CascadaPasos
+
+ref cultureInfo en-US
+

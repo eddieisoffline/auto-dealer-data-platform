@@ -1,0 +1,184 @@
+table kpi_mensual
+	lineageTag: 0313dd52-e019-409e-b897-6f65903bda1a
+
+	column dealer_name
+		dataType: string
+		lineageTag: e08702c8-cb09-4598-b17f-940f438de6f8
+		summarizeBy: none
+		sourceColumn: dealer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 970af426-af2d-4e4d-a32c-384907650a6f
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column num_ventas
+		dataType: int64
+		formatString: 0
+		lineageTag: d9ea1aa9-9f10-48b3-9642-655ec3a523e8
+		summarizeBy: sum
+		sourceColumn: num_ventas
+
+		annotation SummarizationSetBy = Automatic
+
+	column ventas
+		dataType: double
+		lineageTag: cad520d9-812e-4165-a085-19c9a5f065e3
+		summarizeBy: sum
+		sourceColumn: ventas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column costo
+		dataType: double
+		lineageTag: b6cd7c81-1cb4-45d1-baaf-b1d37a2b9ce4
+		summarizeBy: sum
+		sourceColumn: costo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utilidad_bruta
+		dataType: double
+		lineageTag: b8887cb7-ff70-4278-a3b0-4688c55b41b9
+		summarizeBy: sum
+		sourceColumn: utilidad_bruta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column opex
+		dataType: double
+		lineageTag: c2ed774a-8965-4d8d-849b-63b85136e58b
+		summarizeBy: sum
+		sourceColumn: opex
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ebitda
+		dataType: double
+		lineageTag: ce0b09a6-9d14-4153-be90-1ec72b8a6a62
+		summarizeBy: sum
+		sourceColumn: ebitda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column depreciacion
+		dataType: double
+		lineageTag: bcf6b16d-31fd-46a5-aabd-b1405c0dfd19
+		summarizeBy: sum
+		sourceColumn: depreciacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intereses
+		dataType: double
+		lineageTag: 59591ef1-9014-42e4-b1c0-abdfc5a86e45
+		summarizeBy: sum
+		sourceColumn: intereses
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column impuestos
+		dataType: double
+		lineageTag: 6a1bf258-e6c4-4c80-a77f-325111c14343
+		summarizeBy: sum
+		sourceColumn: impuestos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utilidad_neta
+		dataType: double
+		lineageTag: 430e5486-fd3e-4cb0-9506-a23863e33d3d
+		summarizeBy: sum
+		sourceColumn: utilidad_neta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column objetivo_ventas
+		dataType: double
+		lineageTag: 4a911a30-9721-4087-bba5-6f326925de84
+		summarizeBy: sum
+		sourceColumn: objetivo_ventas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ticket_promedio
+		dataType: double
+		lineageTag: 4740f154-c70e-4d99-bbca-329e2549a5f8
+		summarizeBy: sum
+		sourceColumn: ticket_promedio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column margen_bruto
+		dataType: double
+		lineageTag: 7b01ac5a-7813-4bb1-9f9a-c9b577ce8cb5
+		summarizeBy: sum
+		sourceColumn: margen_bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column margen_ebitda
+		dataType: double
+		lineageTag: 7cb50efa-5194-4140-8295-87ddfb07132b
+		summarizeBy: sum
+		sourceColumn: margen_ebitda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cumplimiento
+		dataType: double
+		lineageTag: ff9565f8-3380-409a-9153-5a24b9a7629f
+		summarizeBy: sum
+		sourceColumn: cumplimiento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition kpi_mensual = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([Implementation="2.0"]),
+				    Proyecto = Source{[Name=ProyectoGCP,Kind="Database"]}[Data],
+				    dealer_marts_Schema = Proyecto{[Name="dealer_marts",Kind="Schema"]}[Data],
+				    kpi_mensual_View = dealer_marts_Schema{[Name="kpi_mensual",Kind="View"]}[Data]
+				in
+				    kpi_mensual_View
+
+	annotation PBI_ResultType = Table
+

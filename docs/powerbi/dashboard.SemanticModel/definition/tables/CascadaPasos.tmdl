@@ -1,0 +1,52 @@
+table CascadaPasos
+	lineageTag: 111f2741-56ce-451e-93e7-44012fb94c7d
+
+	column Paso
+		lineageTag: 03e98de2-68f7-47ac-b1af-e6ae85341a0e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Paso]
+		sortByColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orden
+		formatString: 0
+		lineageTag: 8bb86125-3c63-4a6d-bb9f-979f0d9ba6f6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		lineageTag: dd9f98fa-6ddc-4445-93bf-907a68717696
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Tipo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CascadaPasos = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "Paso", STRING,
+				    "Orden", INTEGER,
+				    "Tipo", STRING,
+				    {
+				        { "Ventas", 1, "Total" },
+				        { "Costo de ventas", 2, "Baja" },
+				        { "Utilidad bruta", 3, "Total" },
+				        { "Gastos operativos", 4, "Baja" },
+				        { "EBITDA", 5, "Total" },
+				        { "Depreciación", 6, "Baja" },
+				        { "Intereses", 7, "Baja" },
+				        { "Impuestos", 8, "Baja" },
+				        { "Utilidad neta", 9, "Total" }
+				    }
+				)
+
+	annotation PBI_Id = cea9444801c4409481e7d07d790d2387
+

@@ -1,0 +1,23 @@
+table DimMes
+	lineageTag: 1adc12d9-c3c4-444d-8f16-3e1ead9e8d31
+
+	column mes
+		formatString: General Date
+		lineageTag: 0fe9e7bb-ef47-4fa7-9b20-ee04b24d541c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [mes]
+
+		variation Variation
+			isDefault
+			relationship: 94b4b7d0-71c0-42fc-863c-4936fab5f05d
+			defaultHierarchy: LocalDateTable_1c84358e-8f56-454f-9003-10a6b894e0b2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimMes = calculated
+		mode: import
+		source = DISTINCT ( SELECTCOLUMNS ( dim_fecha, "mes", dim_fecha[mes] ) )
+
+	annotation PBI_Id = 4c474ede43fe46f795db73015bc22f27
+
