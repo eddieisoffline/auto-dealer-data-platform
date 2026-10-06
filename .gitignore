@@ -7,6 +7,8 @@ data/
 *.csv
 *.parquet
 .env
+# Guía local para asistentes de IA: se conserva en disco, no se publica
+CLAUDE.md
 # Terraform: el estado y las variables locales no se versionan
 # (SÍ se versiona .terraform.lock.hcl)
 .terraform/

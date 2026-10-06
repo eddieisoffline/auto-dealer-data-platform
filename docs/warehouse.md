@@ -30,6 +30,10 @@ Utilidad neta  = EBITDA - depreciación - intereses - impuestos
 
 ## Conectar Power BI
 
+El reporte está en [`docs/powerbi/dashboard.pbix`](powerbi/dashboard.pbix): resumen
+ejecutivo, comparativo entre concesionarias y operación diaria. Para refrescarlo
+contra tu propio proyecto se necesitan los permisos que se describen abajo.
+
 Obtener datos, Google BigQuery, tu proyecto, dataset `dealer_marts`. Quien abra el
 reporte necesita permiso de lectura sobre `dealer_marts` y también sobre
 `dealer_curated`, porque las vistas leen de ahí. Relaciona

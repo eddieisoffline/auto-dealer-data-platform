@@ -89,15 +89,28 @@ Python (pandas, pyarrow) · SQL (BigQuery) · Google Cloud (Cloud Storage, BigQu
 Cloud Run Jobs, Cloud Scheduler, Secret Manager, Artifact Registry) · Terraform ·
 Docker · GitHub Actions · Power BI
 
-<!--
-Capturas: toma las imágenes indicadas en docs/img/README.md, guárdalas en
-docs/img/ y descomenta este bloque.
-
 ## Resultado
 
-![Resumen en Power BI](docs/img/powerbi-resumen.png)
-![Comparativo entre sucursales](docs/img/powerbi-sucursales.png)
--->
+Carga histórica de 2022 ejecutada en Cloud Run: 10,645 ventas de 28
+concesionarias en 292 días con ventas. Cada paso tarda unos 2–3 minutos
+(backfill 2:12, curate 2:51, warehouse 2:10) y las validaciones pasan sin
+incidencias. Las cifras financieras son sintéticas.
+
+### Power BI
+
+![Resumen ejecutivo en Power BI](docs/img/powerbi-resumen.png)
+![Comparativo entre concesionarias](docs/img/powerbi-sucursales.png)
+![Operación diaria con media móvil de 7 días](docs/img/powerbi-diario.png)
+
+El archivo del reporte está en [docs/powerbi/dashboard.pbix](docs/powerbi/dashboard.pbix).
+
+### Plataforma en Google Cloud
+
+![Data lake en Cloud Storage con particiones por día y por mes](docs/img/gcs-lake.png)
+![Tablas y vistas en BigQuery con una consulta a kpi_mensual](docs/img/bigquery-marts.png)
+![Historial de ejecuciones del Cloud Run Job](docs/img/cloud-run-job.png)
+![Logs del refresco del warehouse](docs/img/cloud-run-job-logs.png)
+![CI/CD en GitHub Actions: test, terraform y deploy](docs/img/ci-verde.png)
 
 ## Probarlo en local
 
@@ -129,7 +142,7 @@ src/pipeline/
 tests/               pruebas unitarias
 infra/terraform/     infraestructura como código
 .github/workflows/   CI y despliegue
-docs/                documentación
+docs/                documentación, capturas (img/) y reporte de Power BI (powerbi/)
 ```
 
 ## Documentación
@@ -138,7 +151,6 @@ docs/                documentación
 - [Arquitectura y decisiones](docs/arquitectura.md)
 - [Warehouse y Power BI](docs/warehouse.md)
 - [Despliegue en Google Cloud](docs/despliegue.md)
-- [Guía de capturas](docs/img/README.md)
 
 ## Estado
 
@@ -148,8 +160,8 @@ docs/                documentación
 | Infraestructura en GCP (Terraform) | Desplegada: bucket, BigQuery, Secret Manager, Artifact Registry, Cloud Run Job y Scheduler diario |
 | Carga histórica 2022 | Ejecutada en Cloud Run: 10,645 ventas en 292 días con ventas, 28 concesionarias; backfill 2:12, curate 2:51, warehouse 2:10 (min:s) |
 | SQL de BigQuery | Ejecutado: tablas en `dealer_curated` y vistas de KPIs en `dealer_marts` |
-| Despliegue automático con GitHub Actions | Configurado; pendiente del primer push que lo ejecute |
-| Reporte de Power BI | Pendiente |
+| Despliegue automático con GitHub Actions | Verificado: cada push a `main` prueba, valida Terraform y actualiza el job con una imagen etiquetada con el commit |
+| Reporte de Power BI | Completo: resumen ejecutivo, concesionarias y operación diaria, conectado a `dealer_marts` |
 
 ## Datos
 

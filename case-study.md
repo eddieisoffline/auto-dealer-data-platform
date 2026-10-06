@@ -4,12 +4,13 @@ title:
   en: "Car Dealership Data Platform on Google Cloud"
 slug: "auto-dealer-data-platform"
 summary:
-  es: "Pipeline automatizado de Kaggle a BigQuery que convierte ventas de concesionarias en KPIs financieros (utilidad bruta, EBITDA, cumplimiento) listos para Power BI, con infraestructura como código y despliegue continuo."
-  en: "Automated Kaggle-to-BigQuery pipeline that turns dealership sales into financial KPIs (gross profit, EBITDA, target attainment) ready for Power BI, with infrastructure as code and continuous deployment."
+  es: "Pipeline automatizado de Kaggle a BigQuery que convierte ventas de concesionarias en KPIs financieros (utilidad bruta, EBITDA, cumplimiento) para Power BI, desplegado en Google Cloud con infraestructura como código y despliegue continuo."
+  en: "Automated Kaggle-to-BigQuery pipeline that turns dealership sales into financial KPIs (gross profit, EBITDA, target attainment) for Power BI, deployed on Google Cloud with infrastructure as code and continuous deployment."
 tools: ["Python", "pandas", "SQL", "BigQuery", "Cloud Storage", "Cloud Run", "Terraform", "GitHub Actions", "Power BI"]
 repo_url: "https://github.com/eddieisoffline/auto-dealer-data-platform"
-featured: false
-date: "2026-10-04"
+cover_image: "https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-resumen.png"
+featured: true
+date: "2026-10-05"
 ---
 
 :::es
@@ -53,12 +54,37 @@ Cloud Scheduler (diario) ─► Cloud Run Job ─► ejecuta el pipeline
 
 ## Resultados
 
-- Pipeline completo en código: ingesta, curated, validaciones y refresco del warehouse, con línea de comandos para carga diaria y backfill.
-- 68 pruebas unitarias que corren sin red ni credenciales, gracias a la inyección del descargador de Kaggle y del cliente de BigQuery.
-- Infraestructura de GCP completa como código en Terraform y CI/CD sin llaves guardadas.
-- Modelo de KPIs financieros en SQL listo para conectar Power BI.
+- **Carga histórica de 2022 en Cloud Run:** 10,645 ventas de 28 concesionarias en 292 días con ventas. Cada paso tarda entre 2 y 3 minutos: backfill 2:12, curate 2:51 y warehouse 2:10.
+- **Calidad:** las validaciones pasaron sin incidencias; raw y curated tienen las mismas 10,645 filas.
+- **Warehouse:** 6 tablas en `dealer_curated` y 4 vistas en `dealer_marts`, reconstruidas en 10 sentencias SQL. Margen bruto anual de 13.95 % y cumplimiento de objetivos de 97.76 % (cifras sintéticas).
+- **CI/CD:** 68 pruebas unitarias sin red ni credenciales; cada push a `main` prueba, valida Terraform y despliega la nueva imagen en el Cloud Run Job en alrededor de un minuto.
+- **Reporte:** Power BI con resumen ejecutivo, comparativo entre concesionarias y operación diaria, conectado a `dealer_marts`.
 
-La ejecución en Google Cloud y el reporte de Power BI son el siguiente paso; este caso se actualizará con capturas y cifras medidas.
+![Resumen ejecutivo en Power BI: KPIs, ventas contra objetivo y cascada de ventas a utilidad neta](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-resumen.png)
+
+![Comparativo entre concesionarias: ranking de ventas y semáforo de cumplimiento](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-sucursales.png)
+
+![Operación diaria: ventas por día con media móvil de 7 días](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-diario.png)
+
+## Evidencia en Google Cloud
+
+Data lake en Cloud Storage con particiones por día (`sale_date=`) y por mes (`month=`):
+
+![Data lake en Cloud Storage con particiones por día y por mes](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/gcs-lake.png)
+
+Tablas y vistas en BigQuery, con una consulta a `kpi_mensual`:
+
+![Tablas y vistas en BigQuery con una consulta a kpi_mensual](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/bigquery-marts.png)
+
+Ejecuciones del Cloud Run Job y logs del refresco del warehouse:
+
+![Historial de ejecuciones del Cloud Run Job](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/cloud-run-job.png)
+
+![Logs del refresco del warehouse: 10 sentencias CREATE OR REPLACE](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/cloud-run-job-logs.png)
+
+CI/CD en GitHub Actions:
+
+![CI/CD en GitHub Actions: test, terraform y deploy en verde](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/ci-verde.png)
 
 ## Stack
 
@@ -112,12 +138,37 @@ Cloud Scheduler (daily) ─► Cloud Run Job ─► runs the pipeline
 
 ## Results
 
-- Complete pipeline in code: ingestion, curated layer, validations, and warehouse refresh, with a CLI for daily loads and backfills.
-- 68 unit tests that run without network or credentials, thanks to injecting the Kaggle downloader and the BigQuery client.
-- Full GCP infrastructure as code in Terraform, and CI/CD with no stored keys.
-- SQL model of financial KPIs ready to connect to Power BI.
+- **2022 historical load on Cloud Run:** 10,645 sales from 28 dealerships across 292 days with sales. Each step takes 2 to 3 minutes: backfill 2:12, curate 2:51, and warehouse 2:10.
+- **Quality:** validations passed with no issues; raw and curated hold the same 10,645 rows.
+- **Warehouse:** 6 tables in `dealer_curated` and 4 views in `dealer_marts`, rebuilt by 10 SQL statements. Annual gross margin of 13.95% and target attainment of 97.76% (synthetic figures).
+- **CI/CD:** 68 unit tests with no network or credentials; every push to `main` runs the tests, validates Terraform, and deploys the new image to the Cloud Run Job in about a minute.
+- **Report:** Power BI with an executive summary, a dealership comparison, and daily operations, connected to `dealer_marts`.
 
-Running the pipeline on Google Cloud and building the Power BI report are the next steps; this case study will be updated with screenshots and measured figures.
+![Power BI executive summary: KPIs, sales versus target, and a waterfall from sales to net income](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-resumen.png)
+
+![Dealership comparison: sales ranking and target attainment traffic light](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-sucursales.png)
+
+![Daily operations: daily sales with a 7-day moving average](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-diario.png)
+
+## Evidence on Google Cloud
+
+Cloud Storage data lake with daily (`sale_date=`) and monthly (`month=`) partitions:
+
+![Cloud Storage data lake with daily and monthly partitions](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/gcs-lake.png)
+
+BigQuery tables and views, with a query on `kpi_mensual`:
+
+![BigQuery tables and views with a query on kpi_mensual](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/bigquery-marts.png)
+
+Cloud Run Job executions and warehouse refresh logs:
+
+![Cloud Run Job execution history](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/cloud-run-job.png)
+
+![Warehouse refresh logs: 10 CREATE OR REPLACE statements](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/cloud-run-job-logs.png)
+
+CI/CD on GitHub Actions:
+
+![CI/CD on GitHub Actions: test, terraform, and deploy passing](https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/ci-verde.png)
 
 ## Stack
 
