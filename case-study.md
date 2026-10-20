@@ -4,9 +4,9 @@ title:
   en: "Car Dealership Data Platform on Google Cloud"
 slug: "auto-dealer-data-platform"
 summary:
-  es: "Pipeline automatizado de Kaggle a BigQuery que convierte ventas de concesionarias en KPIs financieros (utilidad bruta, EBITDA, cumplimiento) para Power BI, desplegado en Google Cloud con infraestructura como código y despliegue continuo."
-  en: "Automated Kaggle-to-BigQuery pipeline that turns dealership sales into financial KPIs (gross profit, EBITDA, target attainment) for Power BI, deployed on Google Cloud with infrastructure as code and continuous deployment."
-tools: ["Python", "pandas", "SQL", "BigQuery", "Cloud Storage", "Cloud Run", "Terraform", "GitHub Actions", "Power BI"]
+  es: "Pipeline diario de Kaggle a BigQuery que convierte ventas de concesionarias en KPIs financieros (utilidad bruta, EBITDA, cumplimiento) para Power BI. Corre en Cloud Run, con Terraform y despliegue continuo."
+  en: "Daily Kaggle-to-BigQuery pipeline that turns dealership sales into financial KPIs (gross profit, EBITDA, target attainment) for Power BI. It runs on Cloud Run, with Terraform and continuous deployment."
+tools: ["Python", "pandas", "SQL", "BigQuery", "Power BI", "Cloud Run", "Cloud Storage", "Terraform", "Docker", "pytest", "GitHub Actions"]
 repo_url: "https://github.com/eddieisoffline/auto-dealer-data-platform"
 cover_image: "https://raw.githubusercontent.com/eddieisoffline/auto-dealer-data-platform/main/docs/img/powerbi-resumen.png"
 featured: true
@@ -16,7 +16,7 @@ date: "2026-10-05"
 :::es
 ## Problema
 
-En muchas redes de concesionarias, los reportes de desempeño (ventas, utilidad bruta, EBITDA y cumplimiento de objetivos por sucursal) se arman a mano en Excel, tardan semanas en cada cierre y llegan cuando ya no sirven para decidir. Este proyecto construye la alternativa: un flujo automático, reproducible y verificable, de la fuente al tablero, con actualización diaria.
+En muchas redes de concesionarias, los reportes de desempeño (ventas, utilidad bruta, EBITDA y cumplimiento de objetivos por sucursal) se arman a mano en Excel, tardan semanas en cada cierre y llegan cuando ya no sirven para decidir. Este proyecto arma la alternativa: un pipeline que se actualiza solo cada día, de la fuente al tablero, y que da el mismo resultado si se vuelve a correr.
 
 ## Arquitectura
 
@@ -100,7 +100,7 @@ Documentación técnica: [arquitectura y decisiones](https://github.com/eddieiso
 :::en
 ## Problem
 
-In many dealership networks, performance reports (sales, gross profit, EBITDA, and target attainment per branch) are assembled by hand in Excel. Each close takes weeks, and the numbers arrive too late to support decisions. This project builds the alternative: an automated, reproducible, and verifiable flow from source to dashboard, refreshed daily.
+In many dealership networks, performance reports (sales, gross profit, EBITDA, and target attainment per branch) are assembled by hand in Excel. Each close takes weeks, and the numbers arrive too late to support decisions. This project builds the alternative: a pipeline that refreshes itself every day, from source to dashboard, and gives the same result when it runs again.
 
 ## Architecture
 
